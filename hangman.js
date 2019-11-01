@@ -1,17 +1,17 @@
-const readline = require('readline-sync');
+const readline = require("readline-sync");
 
 function getValidLetterGuess() {
   function guessIsValid(letter) {
-    return letter.length === 1 && letter.toUpperCase() != letter.toLowerCase()
+    return letter.length === 1 && letter.toUpperCase() != letter.toLowerCase();
   }
-  let letter = ""
+  let letter = "";
   while (!letter) {
-    let input = readline.question("Please enter your guess: ")
+    let input = readline.question("Please enter your guess: ");
     if (guessIsValid(input)) {
-      letter = input
+      letter = input;
     } else {
-      console.log("Please enter a valid letter")
+      console.log("Please enter a valid letter");
     }
   }
-  return letter.toLowerCase()
+  return letter.toLowerCase();
 }
